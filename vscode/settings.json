@@ -1,0 +1,13 @@
+{
+    "window.nativeTabs": true,
+    "editor.accessibilitySupport": "off",
+    "workbench.colorTheme": "Default Light Modern",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "claudeCode.preferredLocation": "panel",
+    "vim.highlightedyank.enable": true,
+    "chat.fontSize": 14,
+    "editor.fontSize": 14,
+    "debug.console.fontSize": 14,
+    "chat.editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14
+}

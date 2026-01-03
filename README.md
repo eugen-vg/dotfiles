@@ -6,6 +6,9 @@ mkdir -p ~/.vim && ln -s ~/dotfiles/vim/vimrc ~/.vim/vimrc
 ```console
 mkdir -p ~/.config/nvim && ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 ```
+```console
+mkdir -p $HOME/Library/Application\ Support/Code/User /ln -s ~/dotfiles/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
+```
 
 ## windows
 ```console
