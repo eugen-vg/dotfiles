@@ -70,18 +70,36 @@ fi
 if [ -f "${DOTFILES_DIR}/vscode/settings.json" ]; then
     if [[ "$OSTYPE" == "darwin"* ]]; then
         # macOS
-        VSCODE_DIR="$HOME/Library/Application Support/Code/User"
+        VSCODE_CONFIG_DIR="$HOME/Library/Application Support/Code/User"
     else
         # Linux
-        VSCODE_DIR="$HOME/.config/Code/User"
+        VSCODE_CONFIG_DIR="$HOME/.config/Code/User"
     fi
 
     create_symlink \
         "${DOTFILES_DIR}/vscode/settings.json" \
-        "${VSCODE_DIR}/settings.json" \
+        "${VSCODE_CONFIG_DIR}/settings.json" \
         "VSCode settings"
 else
     echo -e "${RED}Warning: vscode/settings.json not found${NC}"
+fi
+
+# Install VSCode extensions (Mac/Linux paths differ)
+if [ -f "${DOTFILES_DIR}/vscode/extensions.json" ]; then
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        # macOS
+        # TODO: Add extensions for macOS
+        echo -e "${RED}Warning: VSCode Extensions were not set up for macOS${NC}"
+    else
+        # Linux
+        VSCODE_EXTENSIONS_DIR="$HOME/.vscode/extensions"
+        create_symlink \
+            "${DOTFILES_DIR}/vscode/extensions.json" \
+            "${VSCODE_EXTENSIONS_DIR}/extensions.json" \
+            "VSCode extensions"
+    fi
+else
+    echo -e "${RED}Warning: vscode/extensions.json not found${NC}"
 fi
 
 echo -e "${GREEN}======================================${NC}"
@@ -95,6 +113,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "  - VSCode: ~/Library/Application Support/Code/User/settings.json"
 else
     echo "  - VSCode: ~/.config/Code/User/settings.json"
+    echo "  - VSCode: ~/.vscode/extensions/extensions.json"
 fi
 echo ""
 echo -e "${YELLOW}Note: Any existing files have been backed up with .backup extension${NC}"
