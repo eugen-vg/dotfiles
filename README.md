@@ -49,6 +49,8 @@ mkdir -p "$HOME/Library/Application Support/Code/User" && ln -s ~/dotfiles/vscod
 # VSCode (Linux)
 mkdir -p ~/.config/Code/User && ln -s ~/dotfiles/vscode/settings.json ~/.config/Code/User/settings.json
 ```
+Karabiner:
+Copy files to the ~/.config/karabiner/assets/complex_modifications and enable them in Complex Modifications -> Add predifined rule
 
 ### Windows
 

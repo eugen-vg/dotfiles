@@ -1,0 +1,29 @@
+{
+    "title": "Disable all keys except Touch ID",
+    "rules": [
+        {
+            "description": "Disable all keys except Touch ID",
+            "manipulators": [
+                {
+                    "conditions": [
+                        {
+                            "identifiers": [
+                                {
+                                    "is_keyboard": true,
+                                    "product_id": 801,
+                                    "vendor_id": 1452
+                                }
+                            ],
+                            "type": "device_if"
+                        }
+                    ],
+                    "from": {
+                        "any": "key_code"
+                    },
+                    "to_if_alone": [],
+                    "type": "basic"
+                }
+            ]
+        }
+    ]
+}
