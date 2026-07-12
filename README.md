@@ -52,6 +52,12 @@ mkdir -p ~/.config/Code/User && ln -s ~/dotfiles/vscode/settings.json ~/.config/
 Karabiner:
 Copy files to the ~/.config/karabiner/assets/complex_modifications and enable them in Complex Modifications -> Add predifined rule
 
+Mac OS:
+Keyboard -> Import Sources -> 
+[ ] Select the previous input source
+[V] Select next source in Input menu Ctrl+Meta+Cmd+L (Karabiner will replace it)
+To combat Meta key for tmux use ghostty or iTerm with macos-option-as-alt option
+
 ### Windows
 
 ```cmd
